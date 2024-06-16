@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    height: 100vh;
+    margin: 0;
+    background-color: pink; 
+}
+
+h1, h2, #currentPlayer {
+    margin: 10px;
+    text-align: center; 
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(7, 60px);
+    grid-template-rows: repeat(6, 60px);
+    gap: 5px;
+    margin-bottom: 20px;
+    border: 5px solid green;
+    padding: 2.5px; 
+    box-sizing: content-box; 
+    background-color: black;
+}
+
+.tile {
+    position: relative; 
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff;
+    border: 2px solid #2143db;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s; 
+}
+
+.tile:hover {
+    transform: scale(0.9); 
+    border-color: #2ff7a0; 
+}
+
+.red-piece {
+    background-color: red; 
+}
+
+.yellow-piece {
+    background-color: yellow;
+}
+
+#restart {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    #board {
+        grid-template-columns: repeat(7, 40px);
+        grid-template-rows: repeat(6, 40px);
+        gap: 4px;
+        border: 3px solid green;
+    }
+
+    .tile {
+        width: 40px;
+        height: 40px;
+    }
+
+    #restart {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    h1, h2, #currentPlayer {
+        font-size: 1.2em; 
+    }
+}
+
+@media (max-width: 400px) {
+    #board {
+        grid-template-columns: repeat(7, 30px);
+        grid-template-rows: repeat(6, 30px);
+        gap: 3px;
+        border: 2px solid green;
+    }
+
+    .tile {
+        width: 30px;
+        height: 30px;
+    }
+
+    #restart {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+
+    h1, h2, #currentPlayer {
+        font-size: 1em; 
+    }
+}
